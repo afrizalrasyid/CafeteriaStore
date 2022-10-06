@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 3, 2022 3:35:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.TblDetTrx" table="tbl_det_trx" catalog="toko_buku" optimistic-lock="version">
+        <id name="trxId" type="string">
+            <column name="trx_id" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="bukuId" type="string">
+            <column name="buku_id" length="5" not-null="true" />
+        </property>
+        <property name="qty" type="int">
+            <column name="qty" not-null="true" />
+        </property>
+        <property name="harga" type="double">
+            <column name="harga" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
